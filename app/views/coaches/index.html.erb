@@ -1,8 +1,12 @@
 <h1>Coaches at Jones Tennis</h1>
 
+
+
 <% @coaches.each do |coach| %>
 <%= coach.name %>
 <%= coach.college %>
 <%= coach.age %>
+<%= link_to 'View User Page', coach_path(coach) %>
+
 <br>
 <% end %>
