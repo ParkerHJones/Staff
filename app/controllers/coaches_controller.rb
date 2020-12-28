@@ -7,9 +7,18 @@ class CoachesController < ApplicationController
     @coach = Coach.find(params[:id])
   end
 
-  # def new 
-  #   @coach = Coach.new
-  # end 
+  def new 
+    @coach = Coach.new
+  end 
+
+  def create
+    @coach = Coach.new(coach_params)
+    if @coach.save
+      redirect_to @coach
+    else 
+      render :new
+    end 
+  end 
 
   def edit 
     @coach = Coach.find(params[:id])
