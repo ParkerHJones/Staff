@@ -1,1 +1,7 @@
-<h1>Coaches</h1>
+<h1><%= @coach.name %></h1>
+
+
+<%= link_to 'Edit Coach', edit_coach_path(@coach) %>
+<%= link_to 'Delete Coach', coach_path(@coach), method: :delete %>
+
+<%= link_to 'Go back to Coach List', coaches_path %>
